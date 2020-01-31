@@ -1,0 +1,7 @@
+import urllib3
+
+http = urllib3.PoolManager()
+
+url = 'http://www.thefamouspeople.com/singers.php'
+response = http.request('GET', url)
+print(response.data)
